@@ -7,6 +7,9 @@ import { TELEGRAM_TOKEN, OPENAI_API_KEY, TEST_ENV} from "../constants/index.js";
 import {ogg} from "./ogg.js"
 import { openai } from "./openai.js";
 
+
+
+
 console.log("HIHIHIHIIHIHIHIHIH")
 const INITIAL_SESSION = {
     messages: [],
