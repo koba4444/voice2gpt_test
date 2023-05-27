@@ -7,13 +7,14 @@ import { TELEGRAM_TOKEN, OPENAI_API_KEY, TEST_ENV} from "../constants/index.js";
 import {ogg} from "./ogg.js"
 import { openai } from "./openai.js";
 
-
+console.log("HIHIHIHIIHIHIHIHIH")
 const INITIAL_SESSION = {
     messages: [],
 }
 
 
 //const bot = new Telegraf(config.get( "TELEGRAM_TOKEN" ));
+console.log(TELEGRAM_TOKEN)
 const bot = new Telegraf(TELEGRAM_TOKEN); 
 
 bot.use(session());
