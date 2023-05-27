@@ -1,5 +1,6 @@
 import { Configuration, OpenAIApi } from "openai";
-import config from "config";
+//import config from "config";
+import { TELEGRAM_TOKEN, OPENAI_API_KEY, TEST_ENV} from "../constants/index.js";
 import {createReadStream} from "fs";
 
 
@@ -52,4 +53,5 @@ async transcription(filepath) {
 
 }
 
-export const openai = new OpenAI(config.get("OPENAI_API_KEY"))
+//export const openai = new OpenAI(config.get("OPENAI_API_KEY"))
+export const openai = new OpenAI(OPENAI_API_KEY)

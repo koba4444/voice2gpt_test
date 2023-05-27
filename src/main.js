@@ -1,7 +1,9 @@
 import { Telegraf, session } from "telegraf";
 import { code } from 'telegraf/format'
 import { message } from "telegraf/filters";
-import config from "config";
+//import config from "config";
+import { TELEGRAM_TOKEN, OPENAI_API_KEY, TEST_ENV} from "../constants/index.js";
+
 import {ogg} from "./ogg.js"
 import { openai } from "./openai.js";
 
@@ -11,7 +13,9 @@ const INITIAL_SESSION = {
 }
 
 
-const bot = new Telegraf(config.get( "TELEGRAM_TOKEN" ));
+//const bot = new Telegraf(config.get( "TELEGRAM_TOKEN" ));
+const bot = new Telegraf(TELEGRAM_TOKEN); 
+
 bot.use(session());
 bot.command("new", async(ctx) => {
     ctx.session = INITIAL_SESSION;
