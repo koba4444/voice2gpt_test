@@ -1,3 +1,4 @@
+import fs from 'fs/promises';
 import {unlink} from 'fs';
 
 export async function removeFile(path){
